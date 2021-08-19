@@ -34,16 +34,19 @@ function setup() {
   astronautG = createGroup();
   astronautG.add(astronaut);
 
-  le = createSprite(0, 200, 10, 400);
-  re = createSprite(800, 200, 10, 400);
-  te = createSprite(400, 0, 800, 10);
-  be = createSprite(400, 400, 800, 10);
+  // le = createSprite(0, 200, 10, 400);
+  // re = createSprite(800, 200, 10, 400);
+  // te = createSprite(400, 0, 800, 10);
+  // be = createSprite(400, 400, 800, 10);
 
 }
 
 function draw() {
   background(iss);  
   drawSprites();
+
+  edges = createEdgeSprites();
+  astronaut.bounceOff(edges);
 
   
   astronaut.setCollider("rectangle", 50, 40, 1300, 2400)
